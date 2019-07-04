@@ -7,10 +7,10 @@ exports.encode = value => {
   }
 
   let result = [];
-  let base = alphabet.length;
+  let base = value < 226981 ? alphabet_with_zero.length : alphabet.length;
 
   for (; value > 0; value = Math.floor(value / base)) {
-    result = result.concat([alphabet[value % base]]);
+    result = result.concat([value < 226981 ? alphabet_with_zero[value % base] : alphabet[value % base]]);
   }
 
   return result.reverse().join("");

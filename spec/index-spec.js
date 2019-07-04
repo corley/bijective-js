@@ -14,8 +14,8 @@ describe("Bijective", () => {
       expect(encode(19587376)).toEqual("bzsaG");
     });
 
-    it("should encode '12345' to 'dtx'", () => {
-      expect(encode("12345")).toEqual("dtx");
+    it("should encode '12345' to 'dnh'", () => {
+      expect(encode("12345")).toEqual("dnh");
     });
 
     it("should encode '1234567' to 'fAVX'", () => {
